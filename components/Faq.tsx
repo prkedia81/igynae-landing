@@ -31,7 +31,7 @@ export default function Faq() {
             <p className="mt-4 text-lg text-gray-500">
               Can’t find the answer you’re looking for? Reach out to our{" "}
               <a
-                href="#"
+                href="/contact-us"
                 className="font-medium text-indigo-600 hover:text-indigo-500">
                 customer support
               </a>{" "}
