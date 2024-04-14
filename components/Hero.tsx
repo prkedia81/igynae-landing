@@ -3,7 +3,46 @@ import Nav from "@/components/Nav";
 
 function Hero() {
   return (
-    <div className="relative bg-gray-50 overflow-hidden">
+    <div className="flex flex-row gap-5 p-12">
+      <div className="border p-6 flex flex-col">
+        <div className="text-center">
+          <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-5xl">
+            <span className="block xl:inline">Hi, I am Dr Monica,</span>{" "}
+            <span className="block text-purple-600 xl:inline">
+              your AI Doctor
+            </span>{" "}
+            <span className="block xl:inline">,trained by MBBS/MD doctors</span>
+          </h1>
+          <p className="mt-3 max-w-md mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
+            I will help you in tracking and healing your{" "}
+            <span className="text-red-500">periods</span> naturally.
+          </p>
+          {/* <div className="mt-5 max-w-md mx-auto sm:flex sm:justify-center md:mt-8">
+            <div className="rounded-md shadow">
+              <a
+                href="#"
+                className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700 md:py-2 md:text-lg md:px-10">
+                Learn More
+              </a>
+            </div>
+            <div className="mt-3 rounded-md shadow sm:mt-0 sm:ml-3">
+              <a
+                href="#"
+                className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-purple-600 bg-white hover:bg-gray-50 md:py-2 md:text-lg md:px-10">
+                Live demo
+              </a>
+            </div>
+          </div> */}
+        </div>
+      </div>
+      <img src="./monica.jpeg" className="w-80" alt="" />
+    </div>
+  );
+}
+
+function OldHero() {
+  return (
+    <div className="relative gradient-to-r from-pink-50 to-purple-50 overflow-hidden">
       <div
         className="hidden sm:block sm:absolute sm:inset-y-0 sm:h-full sm:w-full"
         aria-hidden="true">
@@ -27,7 +66,7 @@ function Hero() {
                   y={0}
                   width={4}
                   height={4}
-                  className="text-gray-200"
+                  className="text-gray-300"
                   fill="currentColor"
                 />
               </pattern>
@@ -57,7 +96,7 @@ function Hero() {
                   y={0}
                   width={4}
                   height={4}
-                  className="text-gray-200"
+                  className="text-gray-300"
                   fill="currentColor"
                 />
               </pattern>
@@ -75,29 +114,31 @@ function Hero() {
         <main className="mt-16 mx-auto max-w-7xl px-4 sm:mt-24">
           <div className="text-center">
             <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
-              <span className="block xl:inline">Nurturing Your</span>{" "}
-              <span className="block text-indigo-600 xl:inline">
-                Reproductive Well-Being
+              <span className="block xl:inline">Hi, I am Dr Monica,</span>{" "}
+              <span className="block text-purple-600 xl:inline">
+                your AI Doctor
               </span>{" "}
-              <span className="block xl:inline">with Technology</span>
+              <span className="block xl:inline">
+                ,trained by MBBS/MD doctors
+              </span>
             </h1>
             <p className="mt-3 max-w-md mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
-              Break barriers, foster understanding, and create a supportive
-              community where every woman can make informed decisions about her
-              reproductive well-being.
+              I will help you in tracking your periods, healing your periods if
+              you have any problems which may be due to many issues including
+              PCOS, endometresis, fibroids and menopause.
             </p>
             <div className="mt-5 max-w-md mx-auto sm:flex sm:justify-center md:mt-8">
               <div className="rounded-md shadow">
                 <a
                   href="#"
-                  className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-2 md:text-lg md:px-10">
+                  className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700 md:py-2 md:text-lg md:px-10">
                   Learn More
                 </a>
               </div>
               <div className="mt-3 rounded-md shadow sm:mt-0 sm:ml-3">
                 <a
                   href="#"
-                  className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-gray-50 md:py-2 md:text-lg md:px-10">
+                  className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-purple-600 bg-white hover:bg-gray-50 md:py-2 md:text-lg md:px-10">
                   Live demo
                 </a>
               </div>

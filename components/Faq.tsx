@@ -32,7 +32,7 @@ export default function Faq() {
               Can’t find the answer you’re looking for? Reach out to our{" "}
               <a
                 href="/contact-us"
-                className="font-medium text-indigo-600 hover:text-indigo-500">
+                className="font-medium text-purple-600 hover:text-purple-500">
                 customer support
               </a>{" "}
               team.

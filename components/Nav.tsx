@@ -5,10 +5,11 @@ import { Popover, Transition } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
 const navigation = [
-  { name: "Contact Us", href: "/contact-us" },
   { name: "Chatbot", href: "/chat" },
-  { name: "Docs", href: "#" },
-  { name: "Company", href: "#" },
+  { name: "Blog", href: "#" },
+  { name: "FAQ", href: "#" },
+  { name: "Community", href: "#" },
+  { name: "Contact Us", href: "/contact-us" },
 ];
 
 export default function Nav() {
@@ -24,12 +25,12 @@ export default function Nav() {
                 <span className="sr-only">Workflow</span>
                 <img
                   className="h-8 w-auto sm:h-10"
-                  src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
+                  src="https://tailwindui.com/img/logos/workflow-mark-purple-600.svg"
                   alt=""
                 />
               </a>
               <div className="-mr-2 flex items-center md:hidden">
-                <Popover.Button className="bg-gray-50 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                <Popover.Button className="bg-gray-50 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-purple-500">
                   <span className="sr-only">Open main menu</span>
                   <Bars3Icon className="h-6 w-6" aria-hidden="true" />
                 </Popover.Button>
@@ -50,7 +51,7 @@ export default function Nav() {
             <span className="inline-flex rounded-md shadow">
               <a
                 href="#"
-                className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-gray-50">
+                className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-purple-600 bg-white hover:bg-gray-50">
                 Log in
               </a>
             </span>
@@ -75,13 +76,13 @@ export default function Nav() {
                 <a href="/">
                   <img
                     className="h-8 w-auto"
-                    src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
+                    src="https://tailwindui.com/img/logos/workflow-mark-purple-600.svg"
                     alt=""
                   />
                 </a>
               </div>
               <div className="-mr-2">
-                <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-purple-500">
                   <span className="sr-only">Close menu</span>
                   <XMarkIcon className="h-6 w-6" aria-hidden="true" />
                 </Popover.Button>
@@ -99,7 +100,7 @@ export default function Nav() {
             </div>
             <a
               href="#"
-              className="block w-full px-5 py-3 text-center font-medium text-indigo-600 bg-gray-50 hover:bg-gray-100">
+              className="block w-full px-5 py-3 text-center font-medium text-purple-600 bg-gray-50 hover:bg-gray-100">
               Log in
             </a>
           </div>
