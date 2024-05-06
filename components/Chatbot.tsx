@@ -21,7 +21,7 @@ function Chatbot() {
           <iframe
             width="100%"
             height="100%"
-            src="https://ragchatbotpr.azurewebsites.net/"></iframe>
+            src="https://copilotstudio.microsoft.com/environments/Default-a5f92cde-2109-4aa7-9f01-51e3a6dce385/bots/cracc_copilot1/canvas?__version__=2"></iframe>
         </div>
       )}
     </div>
