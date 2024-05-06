@@ -1,11 +1,10 @@
 "use client";
-
 import AddPeriod from "@/components/AddPeriod";
 import { Calendar } from "@/components/ui/calendar";
-import React from "react";
+import React, { useState } from "react";
 
-function page() {
-  const [date, setDate] = React.useState<Date | undefined>();
+function Page() {
+  const [date, setDate] = useState<Date | undefined>();
 
   return (
     <>
@@ -23,4 +22,4 @@ function page() {
   );
 }
 
-export default page;
+export default Page;

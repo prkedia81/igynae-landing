@@ -79,9 +79,7 @@ function AddPeriod({ date }: Props) {
               </RadioGroup>
             </div>
             <div>
-              <h2 className="text-xl font-semibold">
-                What is your business type?
-              </h2>
+              <h2 className="text-xl font-semibold">How was your flow?</h2>
               <RadioGroup className="mt-4 space-y-4">
                 <div className="flex items-center space-x-3">
                   <RadioGroupItem
@@ -96,7 +94,7 @@ function AddPeriod({ date }: Props) {
                       <div className="w-3 h-3 rounded-full bg-gray-900 peer-checked:block hidden dark:bg-gray-50" />
                     </div>
                     <span className="text-base font-medium text-gray-900 dark:text-gray-50">
-                      Ecommerce
+                      Light
                     </span>
                   </Label>
                 </div>
@@ -113,7 +111,7 @@ function AddPeriod({ date }: Props) {
                       <div className="w-3 h-3 rounded-full bg-gray-900 peer-checked:block hidden dark:bg-gray-50" />
                     </div>
                     <span className="text-base font-medium text-gray-900 dark:text-gray-50">
-                      Service-based
+                      Light with clots
                     </span>
                   </Label>
                 </div>
@@ -130,14 +128,16 @@ function AddPeriod({ date }: Props) {
                       <div className="w-3 h-3 rounded-full bg-gray-900 peer-checked:block hidden dark:bg-gray-50" />
                     </div>
                     <span className="text-base font-medium text-gray-900 dark:text-gray-50">
-                      Non-profit
+                      Moderate flow
                     </span>
                   </Label>
                 </div>
               </RadioGroup>
             </div>
             <div>
-              <h2 className="text-xl font-semibold">What is your budget?</h2>
+              <h2 className="text-xl font-semibold">
+                What is your pain level?
+              </h2>
               <RadioGroup className="mt-4 space-y-4">
                 <div className="flex items-center space-x-3">
                   <RadioGroupItem
@@ -152,7 +152,7 @@ function AddPeriod({ date }: Props) {
                       <div className="w-3 h-3 rounded-full bg-gray-900 peer-checked:block hidden dark:bg-gray-50" />
                     </div>
                     <span className="text-base font-medium text-gray-900 dark:text-gray-50">
-                      $0 - $1,000
+                      0
                     </span>
                   </Label>
                 </div>
@@ -169,7 +169,7 @@ function AddPeriod({ date }: Props) {
                       <div className="w-3 h-3 rounded-full bg-gray-900 peer-checked:block hidden dark:bg-gray-50" />
                     </div>
                     <span className="text-base font-medium text-gray-900 dark:text-gray-50">
-                      $1,000 - $5,000
+                      2
                     </span>
                   </Label>
                 </div>
@@ -186,7 +186,7 @@ function AddPeriod({ date }: Props) {
                       <div className="w-3 h-3 rounded-full bg-gray-900 peer-checked:block hidden dark:bg-gray-50" />
                     </div>
                     <span className="text-base font-medium text-gray-900 dark:text-gray-50">
-                      $5,000+
+                      3
                     </span>
                   </Label>
                 </div>
