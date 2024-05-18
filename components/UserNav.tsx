@@ -3,12 +3,11 @@
 import { Fragment } from "react";
 import { Popover, Transition } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import { UserButton } from "@clerk/nextjs";
 
 const navigation = [
-  { name: "Blog", href: "#" },
-  { name: "FAQ", href: "#" },
-  { name: "Community", href: "#" },
-  { name: "Contact Us", href: "/contact-us" },
+  { name: "Chatbot", href: "/chat" },
+  { name: "Periods", href: "/add-period" },
 ];
 
 export default function Nav() {
@@ -47,17 +46,8 @@ export default function Nav() {
             ))}
           </div>
           <div className="hidden md:absolute md:flex md:items-center md:justify-end md:inset-y-0 md:right-0">
-            <span className="inline-flex ">
-              <a
-                href="/sign-up"
-                className="inline-flex items-center px-4 py-2 text-base font-medium rounded-md text-purple-600 hover:text-purple-800">
-                Register
-              </a>
-              <a
-                href="/sign-in"
-                className="shadow inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700">
-                Log in
-              </a>
+            <span className="inline-flex rounded-md shadow">
+              <UserButton />
             </span>
           </div>
         </nav>
@@ -102,21 +92,7 @@ export default function Nav() {
                 </a>
               ))}
             </div>
-            {/* <a
-              href="#"
-              className="block w-full px-5 py-3 text-center font-medium text-purple-600 bg-gray-50 hover:bg-gray-100">
-              Log in
-            </a> */}
-            <a
-              href="/sign-up"
-              className="inline-flex items-center px-4 py-2 text-base font-medium rounded-md text-purple-600 hover:text-purple-800">
-              Register
-            </a>
-            <a
-              href="/sign-in"
-              className="shadow inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700">
-              Log in
-            </a>
+            <UserButton />
           </div>
         </Popover.Panel>
       </Transition>
