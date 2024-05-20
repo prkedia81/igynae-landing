@@ -7,7 +7,7 @@ import { UserButton } from "@clerk/nextjs";
 
 const navigation = [
   { name: "Chatbot", href: "/chat" },
-  { name: "Periods", href: "/add-period" },
+  { name: "Periods", href: "/period" },
 ];
 
 export default function Nav() {

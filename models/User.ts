@@ -8,12 +8,15 @@ export interface Users extends Document {
   noFlow: boolean;
 }
 
-const userSchema = new Schema({
-  name: String,
-  // age: Number,
-  clerk_id: { type: String, required: true },
-  periodStarted: { type: String, default: "no" },
-  noFlow: { type: Boolean, default: false },
-});
+const userSchema = new Schema(
+  {
+    name: String,
+    // age: Number,
+    clerk_id: { type: String, required: true },
+    periodStarted: { type: String, default: "no" },
+    noFlow: { type: Boolean, default: false },
+  },
+  { timestamps: true }
+);
 
-export const User = models.Goal || model<Users>("User", userSchema);
+export const User = models.User || model<Users>("User", userSchema);
