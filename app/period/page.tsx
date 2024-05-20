@@ -1,12 +1,40 @@
 "use client";
 
+import PeriodData from "@/components/PeriodData";
 import { Button } from "@/components/ui/button";
 import { Calendar } from "@/components/ui/calendar";
+import { dateFormat } from "@/lib/utils";
+import { useUser } from "@clerk/nextjs";
+import axios from "axios";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 function Page() {
+  const { user } = useUser();
   const [date, setDate] = useState<Date | undefined>();
+  const [fetchedData, setFetchedData] = useState();
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get("api/period/periodData", {
+          params: {
+            userClerkId: user?.id,
+            date: date,
+          },
+        });
+        console.log(response.data);
+        setFetchedData(response.data); // Assuming the API returns JSON data
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    if (date) {
+      // Only fetch if userInput is not empty
+      fetchData();
+    }
+  }, [date]);
 
   return (
     <>
@@ -22,7 +50,7 @@ function Page() {
           </p>
         </div>
       </div>
-      <div className="my-8 flex flex-row justify-center w-full">
+      <div className="my-8 flex flex-row justify-center w-full gap-12">
         <Calendar
           mode="single"
           selected={date}
@@ -37,6 +65,13 @@ function Page() {
           //   row: "w-full mt-2",
           // }}
         />
+        {date && (
+          <PeriodData
+            date={dateFormat(date.getTime())}
+            flow={"No Flow"}
+            clot={"Light Clotting"}
+          />
+        )}
       </div>
       <Link href="add-period" className="w-full">
         <Button className="w-[85%] mx-12">Start Period</Button>
