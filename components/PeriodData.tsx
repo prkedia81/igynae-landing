@@ -1,12 +1,16 @@
 import { CardHeader, CardContent, Card } from "@/components/ui/card";
+import { PeriodDataInput } from "@/services/period";
 
 interface Props {
   date: string;
   flow: string;
   clot: string;
+  // periods: PeriodDataInput[] | undefined;
 }
 
 export default function PeriodData({ date, flow, clot }: Props) {
+  // if (!periods) return <p>No Periods</p>;
+
   return (
     <Card className="w-full max-w-md">
       <CardHeader className="bg-gray-900 text-white p-6 rounded-t-lg">

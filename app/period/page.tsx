@@ -4,6 +4,7 @@ import PeriodData from "@/components/PeriodData";
 import { Button } from "@/components/ui/button";
 import { Calendar } from "@/components/ui/calendar";
 import { dateFormat } from "@/lib/utils";
+import { PeriodDataInput } from "@/services/period";
 import { useUser } from "@clerk/nextjs";
 import axios from "axios";
 import Link from "next/link";
@@ -12,7 +13,11 @@ import React, { useEffect, useState } from "react";
 function Page() {
   const { user } = useUser();
   const [date, setDate] = useState<Date | undefined>();
-  const [fetchedData, setFetchedData] = useState();
+  const [fetchedData, setFetchedData] = useState<
+    PeriodDataInput[] | undefined
+  >();
+  const [flow, setFlow] = useState<string>("");
+  const [clot, setClot] = useState<string>("");
 
   useEffect(() => {
     const fetchData = async () => {
@@ -23,16 +28,33 @@ function Page() {
             date: date,
           },
         });
-        console.log(response.data);
-        setFetchedData(response.data); // Assuming the API returns JSON data
+        const responseData = await response.data.periodData;
+        setFetchedData(responseData); // Assuming the API returns JSON data
       } catch (error) {
         console.error("Error fetching data:", error);
       }
     };
+    // fetchData();
 
-    if (date) {
+    if (!date) {
       // Only fetch if userInput is not empty
       fetchData();
+    }
+  }, [user]);
+
+  useEffect(() => {
+    const currentPeriod = fetchedData?.filter(
+      (data) => new Date(data.createdAt).toDateString() === date?.toDateString()
+    );
+
+    console.log(currentPeriod);
+
+    if (currentPeriod !== undefined && currentPeriod.length != 0) {
+      setFlow(currentPeriod[0].flow);
+      setClot(currentPeriod[0].clot);
+    } else {
+      setFlow("No Period");
+      setClot("No Clot");
     }
   }, [date]);
 
@@ -67,9 +89,10 @@ function Page() {
         />
         {date && (
           <PeriodData
+            // periods={fetchedData}
             date={dateFormat(date.getTime())}
-            flow={"No Flow"}
-            clot={"Light Clotting"}
+            flow={flow}
+            clot={clot}
           />
         )}
       </div>
