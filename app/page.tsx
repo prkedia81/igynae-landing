@@ -13,7 +13,7 @@ export default function Home() {
       <Hero />
       <Steps />
 
-      <div className="max-w-7xl mx-auto py-16 px-4 sm:pb-12 sm:pt-16 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto pt-2 pb-16 px-6">
         <div className="">
           {/* <h2 className="text-base font-semibold text-purple-600 tracking-wide uppercase">
             Your Health
@@ -28,7 +28,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="px-16 flex flex-row gap-4">
+      <div className="px-16 pb-20 flex flex-row gap-4">
         <HoverCard
           cardTitle="Track your periods"
           content="Will estimate next period date, suggest dates for getting pregnant (not to be used as a contraceptive). Will calculate menstrual health index. "
@@ -47,9 +47,9 @@ export default function Home() {
         />
       </div>
 
-      <Features />
-      <Stats />
-      <Faq />
+      {/* <Features /> */}
+      {/* <Stats /> */}
+      {/* <Faq /> */}
       <Cta />
     </>
   );

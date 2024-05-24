@@ -3,9 +3,9 @@ import { LinkIcon } from "@heroicons/react/24/solid";
 export default function Cta() {
   return (
     <div className="relative bg-gray-800">
-      <div className="h-56 bg-purple-600 sm:h-72 md:absolute md:left-0 md:h-full md:w-1/2">
+      <div className="h-56 bg-gray-800 sm:h-72 md:absolute md:left-0 md:h-full md:w-1/2">
         <img
-          className="w-full h-full object-cover"
+          className="w-full h-full object-scale-down"
           src="./monica.jpeg"
           alt=""
         />

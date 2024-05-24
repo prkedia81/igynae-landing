@@ -5,9 +5,9 @@ import { Popover, Transition } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
 const navigation = [
-  { name: "Blog", href: "#" },
-  { name: "FAQ", href: "#" },
-  { name: "Community", href: "#" },
+  // { name: "Blog", href: "#" },
+  { name: "FAQ", href: "/faq" },
+  // { name: "Community", href: "#" },
   { name: "Contact Us", href: "/contact-us" },
 ];
 

@@ -23,22 +23,20 @@ export default function Steps() {
   return (
     <div>
       {/* Header */}
-      <div className="relative pb-32">
-        <div className="relative max-w-7xl mx-auto px-4 py-12 md:py-16 sm:px-6 lg:px-8">
-          <h1 className="text-center text-4xl font-extrabold tracking-tight text-black md:text-4xl lg:text-5xl">
-            How it works?
-          </h1>
-          {/* <p className="mt-6 max-w-3xl text-xl text-gray-300">
+      <div className="pt-6 max-w-7xl mx-auto px-4 pb-12 md:pb-16 sm:px-6 lg:px-8">
+        <h1 className="text-center text-4xl font-extrabold tracking-tight text-black md:text-4xl lg:text-5xl">
+          How it works?
+        </h1>
+        {/* <p className="mt-6 max-w-3xl text-xl text-gray-300">
                 Varius facilisi mauris sed sit. Non sed et duis dui leo, vulputate
                 id malesuada non. Cras aliquet purus dui laoreet diam sed lacus,
                 fames. Dui, amet, nec sit pulvinar.
               </p> */}
-        </div>
       </div>
 
       {/* Overlapping cards */}
       <section
-        className="-mt-32 max-w-7xl mx-auto relative z-10 px-4 pb-12 md:pb-16 sm:px-6 lg:px-8"
+        className="max-w-7xl mx-auto  z-10 px-4 pb-12 md:pb-16 sm:px-6 lg:px-8"
         aria-labelledby="contact-heading">
         <h2 className="sr-only" id="contact-heading">
           Steps to get started
@@ -48,7 +46,7 @@ export default function Steps() {
             <div
               key={step.name}
               className="flex flex-col bg-white rounded-2xl transform transition duration-1000 ease-out hover:-translate-y-5">
-              <div className="flex-1 relative pt-6 px-6 pb-8 md:px-8">
+              <div className="flex-1  pt-6 px-6 pb-8 md:px-8">
                 <div className="mx-auto md:mx-0 mb-6 h-12 w-12 text-white font-bold flex items-center justify-center rounded-xl shadow-lg bg-gray-800 ">
                   {step.number}
                 </div>
