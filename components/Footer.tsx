@@ -77,7 +77,7 @@ export default function Footer() {
   return (
     <footer className="bg-white">
       <div className="max-w-7xl mx-auto py-12 px-4 overflow-hidden sm:px-6 lg:px-8">
-        <nav
+        {/* <nav
           className="-mx-5 -my-2 flex flex-wrap justify-center"
           aria-label="Footer">
           {navigation.main.map((item) => (
@@ -89,8 +89,8 @@ export default function Footer() {
               </a>
             </div>
           ))}
-        </nav>
-        <div className="mt-8 flex justify-center space-x-6">
+        </nav> */}
+        {/* <div className="mt-8 flex justify-center space-x-6">
           {navigation.social.map((item) => (
             <a
               key={item.name}
@@ -100,7 +100,7 @@ export default function Footer() {
               <item.icon className="h-6 w-6" aria-hidden="true" />
             </a>
           ))}
-        </div>
+        </div> */}
         <p className="mt-8 text-center text-base text-gray-400">
           &copy; 2020 Workflow, Inc. All rights reserved.
         </p>
