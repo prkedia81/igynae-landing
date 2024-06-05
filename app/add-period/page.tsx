@@ -21,6 +21,7 @@ async function page() {
     JSON.stringify(await User.findOne<Users>({ clerk_id: userId }))
   );
 
+  // TODO: Edit to 404
   if (!userDb) redirect("/");
 
   const period = userDb.periodStarted;

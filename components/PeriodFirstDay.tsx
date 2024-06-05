@@ -44,7 +44,7 @@ function PeriodFirstDay({ userId }: Props) {
 
   return (
     <>
-      <section className="w-full max-w-3xl mx-auto py-12 md:py-12">
+      <section className="w-full max-w-3xl mx-auto py-6">
         <div className="space-y-6">
           <div className="space-y-2 text-center">
             <h1 className="text-3xl font-bold">
