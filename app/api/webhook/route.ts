@@ -55,7 +55,7 @@ export async function POST(req: Request) {
   const eventType = evt.type;
   if (evt.type === "user.created") {
     await connectMongo();
-    const newUser = User.create({
+    const newUser = await User.create({
       clerk_id: evt.data.id,
       name: `${evt.data.first_name + " " + evt.data.last_name}`,
     });
